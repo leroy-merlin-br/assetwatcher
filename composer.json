@@ -1,12 +1,13 @@
 {
     "name": "leroy-merlin-br/assetwatcher",
     "description": "AssetWatcher will watch and take actions on the files of your project when they are modified",
+    "license": "MIT",
     "authors": [
         {
             "name": "Zizaco Ziuini",
             "email": "zizaco@gmail.com",
             "homepage": "http://www.zizaco.net"
-        }
+        },
         {
             "name": "Guilherme Guitte",
             "email": "guilherme.guitte@gmail.com"
@@ -14,7 +15,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.1.*"
+        "illuminate/support": "4.1.*",
         "illuminate/filesystem": "*"
     },
     "autoload": {
