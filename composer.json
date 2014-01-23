@@ -1,5 +1,5 @@
 {
-    "name": "leroymerlin/assetwatcher",
+    "name": "leroy-merlin-br/assetwatcher",
     "description": "AssetWatcher will watch and take actions on the files of your project when they are modified",
     "authors": [
         {
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Leroymerlin\\Assetwatcher\\": "src/"
+            "LeroyMerlin\\AssetWatcher\\": "src/"
         }
     },
     "minimum-stability": "dev"
