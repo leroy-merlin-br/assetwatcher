@@ -18,7 +18,7 @@ class AssetWatcherServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('leroymerlin/assetwatcher');
+		$this->package('leroy-merlin-br/assetwatcher');
 	}
 
 	/**
