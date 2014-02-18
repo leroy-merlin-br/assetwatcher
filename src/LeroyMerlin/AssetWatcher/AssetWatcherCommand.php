@@ -75,6 +75,7 @@ class AssetWatcherCommand extends Command {
     public function updateAndWatch()
     {
         $watcher = $this->makeResourceWatcher();
+        $initialMapping = true;
 
         while (true) {// ¯\_(ツ)_/¯
             foreach(Config::get('assetwatcher::files_to_watch', []) as $pattern => $closure) {
@@ -86,7 +87,7 @@ class AssetWatcherCommand extends Command {
                     $watcher->watch($file)->onModify($this->updateFileCallback($closure, $file));
 
                     // If `$this->files` is not empty, then update file.
-                    if ($newFiles && !empty($this->files)) {
+                    if ($newFiles && !empty($this->files) && !$initialMapping) {
                         $cleanFilename = substr($file, strlen(app_path())+1);
                         $this->info(date('H:i:s')." - $cleanFilename has been created.");
                         $closure($file);
@@ -97,6 +98,7 @@ class AssetWatcherCommand extends Command {
             }
 
             $watcher->startWatch(500000, 1000000*4);
+            $initialMapping = false;
         }
     }
 
