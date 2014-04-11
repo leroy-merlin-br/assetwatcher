@@ -15,7 +15,7 @@ Run the Composer update comand
 
     $ composer update
 
-In your `config/app.php` add `'Zizaco\Confide\ConfideServiceProvider'` to the end of the `$providers` array
+In your `config/app.php` add `'LeroyMerlin\AssetWatcher\AssetWatcherServiceProvider'` to the end of the `$providers` array
 
     'providers' => array(
 
